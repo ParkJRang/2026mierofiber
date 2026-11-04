@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+/* 1. 메인 슬라이드 영역 */
+main{
+  width:100%;
+  overflow-x:hidden;
+}
+#mslide{position:relative; height:100vh;}
+#mslide h2{display:none;}
+#visual_slide{height:80vh; overflow:hidden;}
+/* 슬라이드 이미지 박스 기준설정 */
+#visual_slide div{
+  position:absolute; transition:0.3s;
+}
+#visual_slide div:first-child{
+  z-index:4; opacity:1;
+}
+#visual_slide div:nth-child(2){
+  z-index:3;
+}
+#visual_slide div:nth-child(3){
+  z-index:2;
+}
+#visual_slide div:last-child{
+  z-index:1;
+}
+
+#visual_slide div img{
+  width:100%; height:100vh; display:block;
+}
+#visual_slide span{
+  position:absolute;
+  font-size:50px;
+  color:var(--font_color02);
+  font-weight:bold;
+  line-height:60px;
+  text-shadow: 0px 0px 4px #ccc;
+  top:250px; left:3%;
+}
+/* 좌/우 버튼 서식 */
+.s_btn{
+  position:absolute; left:3%; top:74%;
+  display:flex; z-index:20;
+}
+.s_btn li{
+  background:#fff; padding:8px 6px;
+  margin-right:10px; cursor:pointer;
+}
+.s_btn img{width:50px;}
+/* 컨트롤 버튼 서식 */
+#visual_slide .ctrl_btn{
+  position:absolute;
+  right:1.5%; top:40%;
+  z-index:10;
+}
+#visual_slide .ctrl_btn li{
+  width:15px; height:15px;
+  border-radius:50%;
+  background:var(--font_color02);
+  margin-bottom:10px;
+  cursor:pointer;
+}
+#visual_slide .ctrl_btn li:last-child{
+  margin-bottom:0;
+}
+/* 컨트롤 버튼 li태그에 적용할 서식 on */
+.on{
+  background:var(--bg_color01) !important;
+}
+
+/* 2. 뉴스 컨텐츠 영역 */
+#news{
+  width:var(--base_width);
+  margin:var(--m_auto);
+  display:flex;
+}
+#news article{margin:var(--margin_01);}
+#news .c_title > h2{/*제목서식*/
+  font-size:32px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+#news .c_title > h2 > span{
+  font-size:20px; display:block;
+}
+#news article:first-child{
+  width:650px;
+}
+#news article iframe{
+  width:650px; height:320px;
+}
+#news article:last-child{
+  width:450px;
+  padding-left:30px;
+}
+#news i.far{
+  color:var(--bg_color01);
+  padding-right:6px;
+  font-size:16px;
+}
+#news ul > li{
+  white-space:nowrap; /*줄바꿈 안하기*/
+  text-overflow:ellipsis; /*생략기호 나오게 하기*/
+  overflow:hidden; /*넘치는 글자 생략*/
+  /*위 3개 코드는 텍스트 생략기호... 구현을 위한 세트*/
+}
+#news ul > li > a{
+  color:var(--font_color01);
+  font-size:18px;
+  line-height:190%;
+}
+#news ul > li > a:hover{
+  text-decoration: underline;
+}
+
+/* 3. 탭 컨텐츠 영역 */
+#tab_cont{
+  background:#f1f1f1;
+}
+#tab_cont h2{font-size:32px;}
+.tcon{
+  width:1140px; height:400px; margin:var(--m_auto);
+  background-image:url('../images/mcon2_7.png');
+  background-repeat:no-repeat;
+  background-position: center right;
+  background-size:46%;
+  overflow:hidden;
+  padding:50px 0px;
+}
+.tcon ul{
+  width:650px; padding-top:30px; display:flex; 
+  position:relative; /*cont 기준*/
+}
+.tcon ul > li{margin-right:10px;}
+.tcon ul > li > a{
+  color:var(--font_color02);
+  background-color:var(--bg_color02);
+  padding:10px 25px;
+  font-size:var(--font_size03);
+}
+.tcon .t_on{background:var(--bg_color01)!important;}
+.tcon ul > li > .cont{
+  position:absolute;
+  width:530px; height:100%;
+  top:80px; left:0px;
+  line-height:200%;
+  padding:10px;
+  color:var(--font_color01);
+  display:none;
+}
+.tcon ul > li:first-child > .cont{display:block;}
+.tcon ul > li > .cont span{
+  font-size:22px;
+  display:block;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+.tcon ul > li > .cont > img{width:540px;}
+
+/* 4. 제품소개 영역 */
+#p_info{
+  background:var(--bg_color03); padding:50px 0 70px 0;
+  width:100%;
+}
+#p_info > .pinfo_box{width:1140px; margin:var(--m_auto);}
+#p_info > .pinfo_box > ul{display:flex; justify-content:center;}
+#p_info > .pinfo_box > ul > li{width:370px; padding:0 20px; text-align:center;}
+#p_info > .pinfo_box > ul > li img{width:80%;}
+/* 제목,문단 서식 */
+#p_info > .pinfo_box > ul > li h3{
+  font-size:24px; height:50px;
+  font-weight:bold;
+  padding:10px 0px;
+  text-align:left;
+  border-bottom:1px solid #d69942;
+}
+#p_info > .pinfo_box > ul > li > span{
+  display:block;
+  padding-top:10px;
+  text-align:left;
+  font-size:14px;
+  font-weight:bold;
+  line-height:180%;
+}
+
+/* 5. 이벤트 영역 */
+.e_btn{
+  position:absolute; left:3%; top:60%;
+  display:none; z-index:20;
+}
+.e_btn li{
+  background:#ccc; padding:12px 6px;
+  margin-right:10px; cursor:pointer;
+}
+.e_btn li i{
+  font-size:30px;
+}
+
+
+/* 6. gallery 영역 */
+#gallery{
+  width:100%; 
+  background-color:var(--bg_color01);
+  padding:30px 0px;
+  text-align:center;
+}
+#gallery>article{
+  width:1140px;
+  margin:0 auto;
+  text-align:left;
+}
+/* 제목서식 */
+#gallery > article > h2{
+  color:var(--font_color02);
+  margin:0;
+}
+
+/* 그리드 레이아웃 */
+.girl{
+  display:grid;
+  grid-gap:20px;
+  padding:30px 20px 20px 20px;
+  grid-template-rows:repeat(3,250px);
+  grid-template-areas: 
+  "g01 g02 g03"
+  "g04 g02 g05"
+  "g06 g07 g08"
+}
+.girl > figure{
+  overflow:hidden; height:243px;
+}
+
+.girl > figure:first-child{grid-area:g01;}
+.girl > figure:nth-child(2){grid-area:g02; height:514px;}
+.girl > figure:nth-child(3){grid-area:g03;}
+.girl > figure:nth-child(4){grid-area:g04;}
+.girl > figure:nth-child(5){grid-area:g05;}
+.girl > figure:nth-child(6){grid-area:g06;}
+.girl > figure:nth-child(7){grid-area:g07;}
+.girl > figure:last-child{grid-area:g08;}
+img{width:100%; transition:0.5s;}
+
+/* 캡션서식 */
+figcaption{
+  background:var(--bg_color02);
+  color:var;
+  height:80px;
+  position:relative;
+  bottom:0px;
+  transition:0.5s
+}
+figure:hover figcaption{
+  bottom:80px;
+}
+figure:hover img{
+  transform:scale(1.04);
+}
+figcaption h3{
+  color:var(--bg_color01); line-height:16px; 
+  font-size:20px; font-weight:bold;
+  padding:15px 0px 5px 20px;
+}
+figcaption p{
+  font-size:12px;
+  color:#ffffff;
+  padding:15px 0px 0px 20px;
+}
+figcaption span{
+  color:#ffffff; border:1px solid #ffffff;
+  padding:5px; position:absolute; top:45%; right:21px;
+  font-size:12px;
+}
+
+/* 버튼 서식 */
+.g_btn{
+  border:none; border-radius:4px;
+  padding:8px 20px;
+  font-size:var(--font_size03);
+  font-weight:bold;
+}
+/* 더보기 추가 컨텐츠 서식 */
+#list{width:1140px;margin:0 auto;}
+#list ul{display:flex;justify-content: space-around;flex-wrap: wrap;}
+#list li{width:30%;}
+#list li img{width:100%;}

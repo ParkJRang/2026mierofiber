@@ -3,22 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>미에로화이바 적응형우베 구현(모바일 화면)</title>
+  <!-- 초기화 서식 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- 공통 서식/변수 -->
+  <link rel="stylesheet" href="./css/m_base.css" type="text/css">
+  <!-- 헤더,푸터 공통서식 -->
+  <link rel="stylesheet" href="./css/m_common.css" type="text/css">
+  <!-- 폰트어썸 라이브러리 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <title>미에로화이바 적응형웹 구현(모바일 화면)</title>
 </head>
 <body>
+  <!-- 헤더영역 -->
   <header>
     <h1>
-      미에로화이바 적응형우베 구현(모바일 화면)
+      <a href="index.html" title="메인페이지 바로가기">
+        <img src="./images/logo2.png" alt="상단로고">
+      </a>
     </h1>
+    <!-- 모바일 토글버튼 -->
+    <div class="toggle">
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+    </div>
+    <!-- 메인 네비 -->
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="미에로">미에로<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="브랜드 스토리">브랜드 스토리</a></li>
+            <li><a href="#" title="식이섬유 스토리">식이섬유 스토리</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="제품소개">제품소개<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="미에로화이바">미에로화이바</a></li>
+            <li><a href="#" title="미에로화이바 SPARKLING ZERO SUGAR">미에로화이바 SPARKLING ZERO SUGAR</a></li>
+            <li><a href="#" title="헬씨올리고">헬씨올리고</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="미에로 스토리">미에로 스토리<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="TV광고">TV광고</a></li>
+            <li><a href="#" title="인쇄광고">인쇄광고</a></li>
+            <li><a href="#" title="프로모션">프로모션</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="미에로 이벤트">미에로 이벤트<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="https://qkrwhdfkd1515.dothome.co.kr/board/bbs/board.php?bo_table=event_test" title="진행중인 이벤트">진행중인 이벤트</a></li>
+            <li><a href="#" title="당첨자 발표">당첨자 발표</a></li>
+          </ul>
+        </li>
+        <li><a href="https://qkrwhdfkd1515.dothome.co.kr/board/bbs/board.php?bo_table=notice" title="공지사항">공지사항</a></li>
+        <li><a href="#" title="공식쇼핑몰 바로가기"><i class="fas fa-bag-shopping"></i>공식쇼핑몰</a></li>
+      </ul>
+    </nav>
   </header>
-
+  <!-- 메인 컨텐츠 영역 -->
   <main>
     컨텐츠 영역
   </main>
-    
+  <!-- 푸터 영역 -->
   <footer>
     <a href="../index.html?move_pc_screen=1" title="">PC버전보기</a>
-    <p>Copyright&copy;2026 miero allrights reserved.</p>
+    <div class="f_inner">
+      <nav>
+        <dl>
+          <dt><a href="#" title="미에로">미에로</a></dt>
+          <dd><a href="#" title="브랜드 스토리">브랜드 스토리</a></dd>
+          <dd><a href="#" title="식이섬유 스토리">식이섬유 스토리</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="#" title="제품소개">제품소개</a></dt>
+          <dd><a href="#" title="미에로화이바">미에로화이바</a></dd>
+          <dd><a href="#" title="미에로화이바 SPARKLING ZERO SUGAR">미에로화이바 SPARKLING ZERO SUGAR</a></dd>
+          <dd><a href="#" title="헬씨올리고">헬씨올리고</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="#" title="미에로스토리">미에로스토리</a></dt>
+          <dd><a href="#" title="TV광고">TV광고</a></dd>
+          <dd><a href="#" title="인쇄광고">인쇄광고</a></dd>
+          <dd><a href="#" title="프로모션">프로모션</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="#" title="미에로이벤트">미에로이벤트</a></dt>
+          <dd><a href="#" title="진행중인 이벤트">진행중인 이벤트</a></dd>
+          <dd><a href="#" title="당첨자 발표">당첨자 발표</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="#" title="공지사항">공지사항</a></dt>
+          <dd><a href="#" title="뉴스 및 알림">News&Notice</a></dd>
+        </dl>
+        <dl>
+          <dt><a href="#" title="현대약품">현대약품</a></dt>
+        </dl>
+        <dl>
+          <dt>Connect width us</dt><br>
+          <div class="i_flex">
+            <dd><a href="페이스북" title=""><i class="fab fa-facebook"></i></a></dd>
+            <dd><a href="인스타그램" title=""><i class="fab fa-instagram"></i></a></dd>
+            <dd><a href="#" title="유튜브"><i class="fab fa-youtube"></i></a></dd>
+          </div>
+        </dl>
+      </nav>
+    </div>
+    <address class="f_bottom">
+      <h2><a href="#"><img src="./images/logo2.png" alt="미에로화이바 로고"></a><h2></h2>
+      <span>&copy; 2018 MIERO FIBER. ALL RIGHTS Reserved. </span>
+    </address>
+    <a href="#" class="top_btn"><img src="./images/top_up.png" alt="위로 바로가기 버튼"></a>
   </footer>
+  <!-- 모바일 헤더,푸터 스크립트 -->
+  <script src="./script/m_common.js"></script>
+
 </body>
 </html>

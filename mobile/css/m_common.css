@@ -52,6 +52,9 @@ header > h1 > a > img{width:100%;}
   background:var(--font_color02);
   width:94%;
   display:none;
+  box-shadow:0px 5px 10px rgba(3,3,3,.2);
+  padding-bottom:10px;
+  z-index:9000;
 }
 .gnb > ul{
   display:flex;
@@ -68,25 +71,25 @@ header > h1 > a > img{width:100%;}
   color:var(--font_color01);
   font-size:0.8rem;
 }
+.gnb > ul > li > a:hover{text-decoration:underline;}
 .gnb i.fa-angle-down{
   transform:translateX(3px);
 }
-.gnb > ul > li:last-child{margin:0!important;}
 .gnb > ul > li:last-child > a{
   background:var(--bg_color01);
   color:var(--font_color02);
   border:none;
   display:block;
 }
-.gnb > ul > li:last-child:hover > a{
+.gnb > ul > li:last-child > a:hover{
   background:var(--bg_color02)!important;
   outline:none !important;
   color:var(--bg_color01)!important;
-  transition:0.4s;
+  transition:0.4s ;
 }
 
 /* 서브메뉴 서식 */
-.gnb > ul > li:first-child .sub{
+/* .gnb > ul > li:first-child .sub{
   width:150px; left:-45px;
 }
 .gnb > ul > li:nth-child(2) .sub{
@@ -94,16 +97,18 @@ header > h1 > a > img{width:100%;}
 }
 .gnb > ul > li:nth-child(3) .sub{
   left:-3px;
-}
+} */
+.act{opacity:1 !important; height:auto !important;}
+.rotate{transform:rotate(180deg)!important;}
 .sub{
-  width:100%;
-  position:absolute;
-  background:var(--font_color02);
+  width:100%; height:0;
+  /* position:absolute; */
+  background:#e6e6e6;
   padding:2px;
   border-radius:4px;
-  border:1px solid var(--font_color01);
   box-shadow:0 1px 1px #999;
-  display:none;
+  transition:0.2s;
+  opacity:0;
 }
 .sub > li{text-align:center;}
 .sub > li > a{
